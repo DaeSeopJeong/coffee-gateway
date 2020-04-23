@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gateway
+  name: gateway1
   labels:
-    app: gateway
+    app: gateway1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gateway
+      app: gateway1
   template:
     metadata:
       labels:
-        app: gateway
+        app: gateway1
     spec:
       containers:
-        - name: gateway
+        - name: gateway1
           image: admin18acr.azurecr.io/gateway:latest
           ports:
             - containerPort: 8080
